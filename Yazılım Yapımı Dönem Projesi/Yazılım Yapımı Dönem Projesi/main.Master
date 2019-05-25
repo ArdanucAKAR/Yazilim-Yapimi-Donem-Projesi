@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Yazılım_Yapımı_Dönem_Projesi.main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Yazilim_Yapimi_Donem_Projesi.main" %>
 
 <!DOCTYPE html>
 
@@ -17,6 +17,7 @@
         <asp:ContentPlaceHolder ID="cphContent" runat="server">
         </asp:ContentPlaceHolder>
         <script src="<%# Page.ResolveUrl("~") %>/asset/js/JQuery/jquery-3.4.1.min.js"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/asset/js/JQuery-Validation/jquery.validate.min.js"></script>
         <script src="<%# Page.ResolveUrl("~") %>/asset/js/Alertify/alertify.min.js"></script>
         <asp:ContentPlaceHolder ID="cphJS" runat="server">
         </asp:ContentPlaceHolder>

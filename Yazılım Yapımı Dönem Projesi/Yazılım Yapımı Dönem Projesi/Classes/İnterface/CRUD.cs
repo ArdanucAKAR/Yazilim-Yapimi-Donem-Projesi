@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     public interface CRUD
     {

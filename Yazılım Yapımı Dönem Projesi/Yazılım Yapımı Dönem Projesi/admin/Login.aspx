@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Yazılım_Yapımı_Dönem_Projesi.admin.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Yazilim_Yapimi_Donem_Projesi.admin.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS" runat="server">
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Custom/AdminLogin.css" rel="stylesheet" />
@@ -13,6 +13,6 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphJS" runat="server">
-    <script src="<%# Page.ResolveUrl("~") %>/asset/js/JQuery-Validation/jquery.validate.min.js"></script>
+    <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/Validation.js"></script>    
     <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/AdminLogin.js"></script>
 </asp:Content>

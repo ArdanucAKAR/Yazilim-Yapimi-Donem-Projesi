@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Yazılım_Yapımı_Dönem_Projesi.Classes.Users.Member
+namespace Yazilim_Yapimi_Donem_Projesi.Classes.Users.Member
 {
     public class MemberAction
     {

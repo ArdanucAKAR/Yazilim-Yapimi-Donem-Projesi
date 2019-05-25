@@ -6,13 +6,14 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (AuthenticationService.isLoggedIn())
+                Response.Redirect("~/Home");
         }
     }
 }

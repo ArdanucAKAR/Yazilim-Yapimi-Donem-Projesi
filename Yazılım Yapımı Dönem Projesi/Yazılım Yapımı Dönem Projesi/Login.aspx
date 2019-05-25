@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Yazılım_Yapımı_Dönem_Projesi.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Yazilim_Yapimi_Donem_Projesi.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS" runat="server">
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Custom/MemberLogin.css" rel="stylesheet" />
@@ -16,6 +16,6 @@
     <p class="mt-5 mb-3 text-muted">Created By <a class="createdBy" href="https://github.com/ArdanucAKAR" target="_blank">Ardanuc AKAR</a> - <a class="createdBy" href="https://github.com/ulasgokce" target="_blank">Ulaş GÖKÇE</a></p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphJS" runat="server">
-    <script src="<%# Page.ResolveUrl("~") %>/asset/js/JQuery-Validation/jquery.validate.min.js"></script>
+    <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/Validation.js"></script>
     <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/MemberLogin.js"></script>
 </asp:Content>

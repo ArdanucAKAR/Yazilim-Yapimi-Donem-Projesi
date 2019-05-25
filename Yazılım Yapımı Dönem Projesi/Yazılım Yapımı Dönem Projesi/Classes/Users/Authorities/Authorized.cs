@@ -4,15 +4,11 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     public class Authorized : User, CRUD
     {
         public int Authority { get; set; }
-        public bool Login()
-        {
-            return true;
-        }
 
         public bool Add()
         {

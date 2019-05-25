@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Yazılım_Yapımı_Dönem_Projesi.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Yazilim_Yapimi_Donem_Projesi.Global" Language="C#" %>

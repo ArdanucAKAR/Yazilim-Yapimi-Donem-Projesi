@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Yazılım_Yapımı_Dönem_Projesi.admin
+namespace Yazilim_Yapimi_Donem_Projesi.admin
 {
 
 

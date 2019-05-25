@@ -1,23 +1,4 @@
-﻿$(document).ready(function () {
-    alertify.set('notifier', 'position', 'top-center');
-    $("#EWL").addClass("form-signin").attr("action", "/").attr("name", "login");
-    $("form[name='login']").validate({
-        errorElement: 'div',
-        rules: {
-            Username: 'required',
-            Password: {
-                required: true
-            }
-        },
-        messages: {
-            Username: 'Kullanıcı Adı Boş Geçilemez',
-            Password: {
-                required: "Şifre Boş Geçilez"
-            }
-        }
-    });
-});
-function Login() {
+﻿function Login() {
     if ($("form[name='login']").valid()) {
         var data = JSON.stringify({
             member: {
@@ -27,7 +8,7 @@ function Login() {
         });
         $.ajax({
             type: "POST",
-            url: "../../../MemberAPI.asmx/MemberLogin",
+            url: "../../../MemberAPI.asmx/Login",
             data: data,
             contentType: "application/json; charset=utf-8",
             dataType: "json",

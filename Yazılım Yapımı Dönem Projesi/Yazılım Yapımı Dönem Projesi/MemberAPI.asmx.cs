@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     /// <summary>
     /// Summary description for API
@@ -16,17 +16,12 @@ namespace Yazılım_Yapımı_Dönem_Projesi
     [System.Web.Script.Services.ScriptService]
     public class API : System.Web.Services.WebService
     {
-        [WebMethod]
-        public Member MemberLogin(Member member)
+        [WebMethod(EnableSession = true)]
+        public Member Login(Member member)
         {
-            return member.Login();
+            return (Member)AuthenticationService.Login(member);
         }
-        [WebMethod]
-        public bool AuthorizedLogin(Authorized authorized)
-        {
-            return authorized.Login();
-        }
-        [WebMethod]
+        [WebMethod(EnableSession = true)]
         public bool Deneme()
         {
             return true;

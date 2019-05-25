@@ -4,7 +4,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     [Serializable]
     public abstract class User

@@ -5,14 +5,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
-    public class AuthenticationService
+    public static class AuthenticationService
     {
         public static User Login(User user)
         {
             SqlParameter[] spParameter = new SqlParameter[3];
-            string FullName = string.Empty;
 
             Database.ProcedureName = "dbo.CheckUser";
             spParameter[0] = new SqlParameter("@username", SqlDbType.NVarChar, 50);
@@ -21,15 +20,15 @@ namespace Yazılım_Yapımı_Dönem_Projesi
             spParameter[1] = new SqlParameter("@password", SqlDbType.NVarChar, 50);
             spParameter[1].Value = user.Password;
 
-            spParameter[1] = new SqlParameter("@type", SqlDbType.NVarChar, 50);
-            spParameter[1].Value = (user is Member) ? "Member" : "Authorized";
+            spParameter[2] = new SqlParameter("@type", SqlDbType.NVarChar, 50);
+            spParameter[2].Value = (user is Member) ? "Member" : "Authorized";
 
             DataSet ds = Database.Queries(spParameter);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                HttpContext.Current.Session.Add("Username", user.Username);
-                HttpContext.Current.Session.Add("Password", user.Password);
+                HttpContext.Current.Session.Add("Username", ds.Tables[0].Rows[0]["username"].ToString());
+                HttpContext.Current.Session.Add("Password", ds.Tables[0].Rows[0]["password"].ToString());
                 HttpContext.Current.Session.Add("LoggedIn", true);
                 if (user is Member)
                 {

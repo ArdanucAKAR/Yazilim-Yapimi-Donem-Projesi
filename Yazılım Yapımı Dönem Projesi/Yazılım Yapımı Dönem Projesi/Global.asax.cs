@@ -6,7 +6,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace Yazılım_Yapımı_Dönem_Projesi
+namespace Yazilim_Yapimi_Donem_Projesi
 {
     public class Global : System.Web.HttpApplication
     {
@@ -19,9 +19,11 @@ namespace Yazılım_Yapımı_Dönem_Projesi
         {
             routes.MapPageRoute("MemberLoginDefault", "", "~/Login.aspx");
             routes.MapPageRoute("MemberLogin", "Login", "~/Login.aspx");
+            routes.MapPageRoute("MemberHome", "Home", "~/Index.aspx");
 
-            routes.MapPageRoute("AdminLoginDefault", "Admin", "~/admin/Login.aspx");
+            routes.MapPageRoute("AdminLoginDefault", "admin", "~/admin/Login.aspx");
             routes.MapPageRoute("AdminLogin", "Admin/Login", "~/admin/Login.aspx");
+            routes.MapPageRoute("AdminHome", "Admin/Home", "~/admin/Index.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)
