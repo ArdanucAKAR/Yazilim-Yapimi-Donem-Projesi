@@ -16,38 +16,19 @@ namespace Yazilim_Yapimi_Donem_Projesi
 
         public bool Add()
         {
-            Database.ProcedureName = "dbo.AddMember";
-
-            SqlParameter[] spParameter = new SqlParameter[5];
-            spParameter[0] = new SqlParameter("@username", SqlDbType.NVarChar, 50);
-            spParameter[0].Value = Username;
-
-            spParameter[1] = new SqlParameter("@password", SqlDbType.NVarChar, 50);
-            spParameter[1].Value = Password;
-
-            spParameter[2] = new SqlParameter("@name", SqlDbType.NVarChar, 50);
-            spParameter[2].Value = Name;
-
-            spParameter[3] = new SqlParameter("@surname", SqlDbType.NVarChar, 50);
-            spParameter[3].Value = Surname;
-
-            spParameter[4] = new SqlParameter("@language", SqlDbType.Int);
-            spParameter[4].Value = Language;
-
-            try
-            {
-                Database.Queries(spParameter);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            throw new NotImplementedException();
         }
+
         public bool Delete()
         {
             throw new NotImplementedException();
         }
+
+        public bool Delte()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Update()
         {
             throw new NotImplementedException();

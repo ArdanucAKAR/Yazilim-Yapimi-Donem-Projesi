@@ -21,5 +21,15 @@ namespace Yazilim_Yapimi_Donem_Projesi
         {
             return Operation.HomePage();
         }
+        [WebMethod(EnableSession = true)]
+        public object AllLanguage()
+        {
+            return Operation.AllLanguage();
+        }
+        [WebMethod(EnableSession = true)]
+        public object AllWord()
+        {
+            return Operation.AllWord();
+        }
     }
 }

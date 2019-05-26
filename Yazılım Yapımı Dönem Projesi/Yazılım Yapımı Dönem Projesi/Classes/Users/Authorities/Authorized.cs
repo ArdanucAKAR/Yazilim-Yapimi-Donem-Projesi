@@ -6,11 +6,11 @@ using System.ComponentModel;
 
 namespace Yazilim_Yapimi_Donem_Projesi
 {
-    public class Authorized : User, CRUD
+    public class Authorized : User
     {
         public int Authority { get; set; }
 
-        public bool Add()
+        public static bool Add()
         {
             throw new NotImplementedException();
         }

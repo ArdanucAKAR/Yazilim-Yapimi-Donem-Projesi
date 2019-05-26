@@ -39,7 +39,7 @@
                     <ul class="nav navbar-nav flex-row">
                         <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
                         <li class="nav-item">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="#" onclick="HomePage()">
                                 <img class="brand-logo" alt="E.W.L" src="<%# Page.ResolveUrl("~") %>/asset/app-assets/images/logo/EWLLogo.png">
                                 <h3 class="brand-text">E.W.L</h3>
                             </a>
@@ -53,7 +53,6 @@
                     <div class="collapse navbar-collapse" id="navbar-mobile">
                         <ul class="nav navbar-nav mr-auto float-left">
                             <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
                         </ul>
                         <ul class="nav navbar-nav float-right">
                             <li class="dropdown dropdown-user nav-item">
@@ -74,9 +73,9 @@
         <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
             <div class="main-menu-content">
                 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class="nav-item"><a href="#"><i class="fa fa-plus"></i><span class="menu-title">Kelime Ekle</span></a></li>
-                    <li class="nav-item"><a href="#"><i class="fa fa-remove"></i><span class="menu-title">Kelime Sil</span></a></li>
-                    <li class="nav-item"><a href="#"><i class="fa fa-wrench"></i><span class="menu-title">Kelime Güncelle</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="AddWord()"><i class="fa fa-plus"></i><span class="menu-title">Kelime Ekle</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="DeleteWord()"><i class="fa fa-remove"></i><span class="menu-title">Kelime Sil</span></a></li>
+                    <li class="nav-item"><a href="#" onclick="UpdateWord()"><i class="fa fa-wrench"></i><span class="menu-title">Kelime Güncelle</span></a></li>
                 </ul>
             </div>
         </div>

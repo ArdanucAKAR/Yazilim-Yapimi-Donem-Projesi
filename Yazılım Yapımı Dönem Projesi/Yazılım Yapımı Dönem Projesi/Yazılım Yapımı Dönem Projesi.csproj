@@ -5697,6 +5697,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Utils\Operation.cs" />
+    <Compile Include="Classes\İnterface\CRUD.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5712,7 +5713,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Utils\AuthenticationService.cs" />
-    <Compile Include="Classes\İnterface\CRUD.cs" />
     <Compile Include="Classes\Utils\Database.cs" />
     <Compile Include="trash\deneme.cs" />
     <Compile Include="trash\Login1.aspx.cs">
@@ -5739,7 +5739,6 @@
     <Compile Include="Classes\Users\Authorities\Authorized.cs" />
     <Compile Include="Classes\Users\Member\Member.cs" />
     <Compile Include="Classes\Users\Member\MemberAction.cs" />
-    <Compile Include="Classes\Words\Meaning.cs" />
     <Compile Include="Classes\Words\Word.cs" />
     <Compile Include="Enums\Languages.cs" />
     <Compile Include="Enums\Permissions.cs" />

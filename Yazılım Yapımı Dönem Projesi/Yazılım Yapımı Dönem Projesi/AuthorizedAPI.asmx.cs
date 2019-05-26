@@ -21,5 +21,10 @@ namespace Yazilim_Yapimi_Donem_Projesi
         {
             return (Authorized)AuthenticationService.Login(authorized);
         }
+        [WebMethod(EnableSession = true)]
+        public bool AddWord(Word word)
+        {
+            return word.Add();
+        }
     }
 }

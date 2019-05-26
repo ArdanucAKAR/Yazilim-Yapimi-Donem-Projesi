@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Yazilim_Yapimi_Donem_Projesi
 {
-    public interface CRUD
+    interface CRUD
     {
         bool Add();
         bool Delete();
