@@ -7,3 +7,32 @@
         width: 170px !important;
     }
 }
+
+a:hover {
+    text-decoration: none !important;
+}
+
+hr {
+    border: 1px solid #aaa;
+}
+
+.c-content {
+    margin-left: 0 !important;
+}
+
+.ajs-message.ajs-customError {
+    color: #fff;
+    background-color: #d95c5c;
+    border-color: #31708f;
+}
+
+.ajs-message.ajs-customSuccess {
+    color: #fff;
+    background-color: #5bbd72;
+    border-color: #31708f;
+}
+
+div.error {
+    color: red;
+    margin: 0 0 1% 0;
+}

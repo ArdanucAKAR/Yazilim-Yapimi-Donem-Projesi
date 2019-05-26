@@ -16,15 +16,6 @@ namespace Yazilim_Yapimi_Donem_Projesi
     [System.Web.Script.Services.ScriptService]
     public class API : System.Web.Services.WebService
     {
-        [WebMethod(EnableSession = true)]
-        public Member Login(Member member)
-        {
-            return (Member)AuthenticationService.Login(member);
-        }
-        [WebMethod(EnableSession = true)]
-        public bool Deneme()
-        {
-            return true;
-        }
+
     }
 }

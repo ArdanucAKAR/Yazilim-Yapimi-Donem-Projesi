@@ -17,14 +17,19 @@ namespace Yazilim_Yapimi_Donem_Projesi
     public class AuthorizedAPI : System.Web.Services.WebService
     {
         [WebMethod(EnableSession = true)]
-        public Authorized Login(Authorized authorized)
-        {
-            return (Authorized)AuthenticationService.Login(authorized);
-        }
-        [WebMethod(EnableSession = true)]
         public bool AddWord(Word word)
         {
             return word.Add();
+        }
+        [WebMethod(EnableSession = true)]
+        public bool DeleteWord(Word word)
+        {
+            return word.Delete();
+        }
+        [WebMethod(EnableSession = true)]
+        public bool UpdateWord(Word word)
+        {
+            return word.Update();
         }
     }
 }

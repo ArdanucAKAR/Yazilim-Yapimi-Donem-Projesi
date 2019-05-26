@@ -5060,41 +5060,16 @@
     <Content Include="asset\css\Alertify\alertify.css" />
     <Content Include="asset\css\Alertify\alertify.min.css" />
     <Content Include="asset\js\Custom\AdminWordOperations.js" />
+    <Content Include="asset\js\Custom\AuthenticationService.js" />
     <Content Include="asset\js\Custom\MemberLogin.js" />
     <Content Include="asset\js\Custom\Validation.js" />
+    <Content Include="AuthenticationServiceAPI.asmx" />
     <Content Include="AuthorizedAPI.asmx" />
-    <Content Include="Content\alertifyjs\alertify.rtl.css" />
-    <Content Include="Content\alertifyjs\alertify.rtl.min.css" />
-    <Content Include="Content\alertifyjs\themes\bootstrap.css" />
-    <Content Include="Content\alertifyjs\themes\bootstrap.min.css" />
-    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.css" />
-    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.min.css" />
-    <Content Include="Content\alertifyjs\themes\default.css" />
-    <Content Include="Content\alertifyjs\themes\default.min.css" />
-    <Content Include="Content\alertifyjs\themes\default.rtl.css" />
-    <Content Include="Content\alertifyjs\themes\default.rtl.min.css" />
-    <Content Include="Content\alertifyjs\themes\semantic.css" />
-    <Content Include="Content\alertifyjs\themes\semantic.min.css" />
-    <Content Include="Content\alertifyjs\themes\semantic.rtl.css" />
-    <Content Include="Content\alertifyjs\themes\semantic.rtl.min.css" />
-    <Content Include="Content\alertify\alertify.bootstrap.css" />
-    <Content Include="Content\alertify\alertify.core.css" />
-    <Content Include="Content\alertify\alertify.default.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="MemberAPI.asmx" />
     <Content Include="asset\js\Alertify\alertify.js" />
     <Content Include="asset\js\Alertify\alertify.min.js" />
-    <Content Include="Scripts\alertify.js" />
-    <Content Include="Scripts\alertify.min.js" />
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="admin\main.Master" />
     <Content Include="asset\app-assets\data\c3\c3_string_x.csv" />
     <Content Include="asset\app-assets\data\c3\c3_test.csv" />
@@ -5613,22 +5588,10 @@
     <Content Include="asset\app-assets\vendors\js\editors\tinymce\skins\lightgray\Variables.less" />
     <Content Include="asset\app-assets\vendors\js\editors\tinymce\skins\lightgray\Window.less" />
     <Content Include="asset\app-assets\vendors\js\pages\.DS_Store" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="asset\js\JQuery\jquery-3.4.1.js" />
     <Content Include="asset\js\JQuery\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="asset\js\JQuery-Validation\jquery.validate.js" />
     <Content Include="asset\js\JQuery-Validation\jquery.validate.min.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\umd\popper-utils.js" />
-    <Content Include="Scripts\umd\popper-utils.min.js" />
-    <Content Include="Scripts\umd\popper.js" />
-    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="trash\Login1.aspx" />
     <Content Include="App_Data\YazilimTasarimi.mdf" />
     <Content Include="App_Data\YazilimTasarimi_log.ldf">
@@ -5637,10 +5600,6 @@
     <Content Include="asset\css\Custom\MemberLogin.css" />
     <Content Include="asset\img\bg-login.jpg" />
     <Content Include="asset\js\Custom\AdminLogin.js" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="asset\css\Bootstrap\bootstrap.css" />
     <Content Include="asset\css\Bootstrap\bootstrap.min.css" />
     <Content Include="asset\css\Font-Awesome\font-awesome.css" />
@@ -5648,20 +5607,6 @@
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="asset\img\logo.jpg" />
     <Content Include="Login.aspx" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="asset\css\Font-Awesome\fonts\FontAwesome.otf" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff" />
@@ -5691,6 +5636,10 @@
     </Compile>
     <Compile Include="admin\main.Master.designer.cs">
       <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationServiceAPI.asmx.cs">
+      <DependentUpon>AuthenticationServiceAPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="AuthorizedAPI.asmx.cs">
       <DependentUpon>AuthorizedAPI.asmx</DependentUpon>
@@ -5753,17 +5702,6 @@
   <ItemGroup>
     <Content Include="main.Master" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
-    <Content Include="Scripts\umd\popper.min.js.map" />
-    <Content Include="Scripts\umd\popper.js.map" />
-    <Content Include="Scripts\umd\popper-utils.min.js.map" />
-    <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5773,9 +5711,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

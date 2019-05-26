@@ -9,10 +9,10 @@
     <div class="form-group">
         <input type="text" name="Username" class="form-control" placeholder="Kullanıcı Adı" autofocus>
         <input type="password" name="Password" class="form-control" placeholder="Şifre">
-        <button type="button" class="mt-3 btn btn-lg btn-block btn-outline btn-rounded btn-quaternary btn-with-arrow mb-2" onclick="Login()">Giriş<span><i class="fa fa-check"></i></span></button>
+        <button type="button" class="mt-3 btn btn-lg btn-block btn-outline btn-rounded btn-quaternary btn-with-arrow mb-2" onclick="Login('Authorized')">Giriş<span><i class="fa fa-check"></i></span></button>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphJS" runat="server">
     <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/Validation.js"></script>    
-    <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/AdminLogin.js"></script>
+    <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/AuthenticationService.js"></script>
 </asp:Content>

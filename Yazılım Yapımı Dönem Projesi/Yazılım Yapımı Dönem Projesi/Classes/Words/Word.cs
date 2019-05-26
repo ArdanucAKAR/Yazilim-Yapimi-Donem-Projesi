@@ -29,12 +29,24 @@ namespace Yazilim_Yapimi_Donem_Projesi
 
         public bool Delete()
         {
-            throw new NotImplementedException();
+            Database.ProcedureName = "dbo.DeleteWord";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@id", SqlDbType.Int);
+            sqlParameters[0].Value = Id;
+            return Database.Queries(sqlParameters) != null ? true : false;
         }
 
         public bool Update()
         {
-            throw new NotImplementedException();
+            Database.ProcedureName = "dbo.UpdateWord";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@wordId", SqlDbType.Int);
+            sqlParameters[0].Value = Id;
+            sqlParameters[1] = new SqlParameter("@word", SqlDbType.NVarChar, 50);
+            sqlParameters[1].Value = _Word;
+            sqlParameters[2] = new SqlParameter("@meaning", SqlDbType.NVarChar, 50);
+            sqlParameters[2].Value = Meaning;
+            return Database.Queries(sqlParameters) != null ? true : false;
         }
     }
 }

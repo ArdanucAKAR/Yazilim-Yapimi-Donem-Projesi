@@ -11,6 +11,8 @@ namespace Yazilim_Yapimi_Donem_Projesi.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!AuthenticationService.isLoggedIn())
+                Response.Redirect("~/Admin/Login");
         }
     }
 }

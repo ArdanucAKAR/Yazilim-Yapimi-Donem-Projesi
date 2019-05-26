@@ -7,39 +7,30 @@ using System.Web.Services;
 namespace Yazilim_Yapimi_Donem_Projesi
 {
     /// <summary>
-    /// Summary description for Utils
+    /// Summary description for AuthenticationServiceAPI
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     [System.Web.Script.Services.ScriptService]
-    public class Utils : System.Web.Services.WebService
+    public class AuthenticationServiceAPI : System.Web.Services.WebService
     {
         [WebMethod(EnableSession = true)]
-        public object HomePage()
+        public Authorized AuthorizedLogin(Authorized authorized)
         {
-            return Operation.HomePage();
+            return (Authorized)AuthenticationService.Login(authorized);
         }
         [WebMethod(EnableSession = true)]
-        public object AllLanguage()
+        public Member MemberLogin(Member member)
         {
-            return Operation.AllLanguage();
+            return (Member)AuthenticationService.Login(member);
         }
+
         [WebMethod(EnableSession = true)]
-        public object AllWord()
+        public void Logout()
         {
-            return Operation.AllWord();
+            AuthenticationService.Logout();
         }
-        [WebMethod(EnableSession = true)]
-        public object GetWord(Word word)
-        {
-            return Operation.GetWord(word);
-        }
-        //[WebMethod(EnableSession = true)]
-        //public bool CheckWord(string word)
-        //{
-        //    return Operation.CheckWord(word);
-        //}
     }
 }
