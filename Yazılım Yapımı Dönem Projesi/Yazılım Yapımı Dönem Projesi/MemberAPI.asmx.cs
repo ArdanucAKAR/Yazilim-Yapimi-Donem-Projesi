@@ -16,6 +16,10 @@ namespace Yazilim_Yapimi_Donem_Projesi
     [System.Web.Script.Services.ScriptService]
     public class API : System.Web.Services.WebService
     {
-
+        [WebMethod(EnableSession = true)]
+        public object Add(Member member)
+        {
+            return member.Add();
+        }
     }
 }

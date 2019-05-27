@@ -1,4 +1,5 @@
-﻿.main-menu.menu-fixed {
+﻿@import url("Utils.css");
+.main-menu.menu-fixed {
     top: 5.9rem !important;
 }
 
@@ -18,18 +19,6 @@ hr {
 
 .c-content {
     margin-left: 0 !important;
-}
-
-.ajs-message.ajs-customError {
-    color: #fff;
-    background-color: #d95c5c;
-    border-color: #31708f;
-}
-
-.ajs-message.ajs-customSuccess {
-    color: #fff;
-    background-color: #5bbd72;
-    border-color: #31708f;
 }
 
 div.error {

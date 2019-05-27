@@ -1,7 +1,8 @@
 ﻿function Login(userType) {
     if ($("form[name='login']").valid()) {
+        var data;
         if (userType === "Authorized") {
-            var data = JSON.stringify({
+            data = JSON.stringify({
                 authorized: {
                     Username: $("input[name='Username']").val(),
                     Password: $("input[name='Password']").val()
@@ -36,7 +37,7 @@
             });
         }
         else {
-            var data = JSON.stringify({
+            data = JSON.stringify({
                 member: {
                     Username: $("input[name='Username']").val(),
                     Password: $("input[name='Password']").val()
@@ -51,7 +52,7 @@
                 success: function (r) {
                     if (r.d != null) {
                         $("#WelcomeMessage").fadeOut(250).html("HOŞGELDİNİZ<br/>" + r.d.Name + " " + r.d.Surname).fadeIn(250);
-                        $(".form-group").fadeOut('slow');
+                        $("#SignIn").fadeOut('slow');
                         setTimeout(function () {
                             location.replace("Home");
                         }, 1000);

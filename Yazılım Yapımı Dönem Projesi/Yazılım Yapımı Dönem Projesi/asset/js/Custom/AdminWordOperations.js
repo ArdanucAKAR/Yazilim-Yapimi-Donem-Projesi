@@ -54,7 +54,6 @@
                 console.log(r.responseText);
             }
         });
-
     });
 
     $("button[name='Update']").click(function () {

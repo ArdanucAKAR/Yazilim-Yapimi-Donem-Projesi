@@ -5055,6 +5055,7 @@
     <Content Include="asset\app-assets\vendors\js\vendors.min.js" />
     <Content Include="asset\css\Custom\AdminLogin.css" />
     <Content Include="asset\css\Custom\AdminMaster.css" />
+    <Content Include="asset\css\Custom\Utils.css" />
     <Content Include="asset\img\bg-AdminLogin-Mobile.jpg" />
     <Content Include="asset\img\bg-AdminLogin.jpg" />
     <Content Include="asset\css\Alertify\alertify.css" />
