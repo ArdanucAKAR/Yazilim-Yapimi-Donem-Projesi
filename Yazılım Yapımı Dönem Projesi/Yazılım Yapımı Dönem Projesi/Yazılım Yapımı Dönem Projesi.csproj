@@ -75,6 +75,9 @@
   <ItemGroup>
     <Content Include="admin\Index.aspx" />
     <Content Include="admin\Login.aspx" />
+    <Content Include="asset\css\Custom\MemberMaster.css" />
+    <Content Include="Login.aspx" />
+    <Content Include="trash\NewFolder1\Login.aspx" />
     <Content Include="asset\app-assets\css-rtl\app.css" />
     <Content Include="asset\app-assets\css-rtl\app.min.css" />
     <Content Include="asset\app-assets\css-rtl\bootstrap-extended.css" />
@@ -5607,7 +5610,7 @@
     <Content Include="asset\css\Font-Awesome\font-awesome.min.css" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="asset\img\logo.jpg" />
-    <Content Include="Login.aspx" />
+    <Content Include="trash\NewFolder2\Login.aspx" />
     <Content Include="asset\css\Font-Awesome\fonts\FontAwesome.otf" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff" />
@@ -5629,6 +5632,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trash\NewFolder1\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trash\NewFolder1\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\main.Master.cs">
@@ -5672,11 +5689,11 @@
     <Compile Include="trash\Login1.aspx.designer.cs">
       <DependentUpon>Login1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="trash\NewFolder2\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="trash\NewFolder2\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="main.Master.cs">

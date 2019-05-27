@@ -225,7 +225,6 @@ function getWords(name) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
-            $("select[name=" + name + "]").append("<option value='0'>Lütfen Bir Kelime Seçiniz</option>");
             var data = JSON.parse(r.d);
             for (var a = 0; a < data.AllWord.length; a++)
                 $("select[name=" + name + "]").append("<option value='" + data.AllWord[a].id + "'>" + data.AllWord[a].word + "</option>");

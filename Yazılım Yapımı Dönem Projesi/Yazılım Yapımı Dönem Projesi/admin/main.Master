@@ -4,29 +4,25 @@
 
 <html lang="tr">
 <head runat="server">
+    <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
-    <meta name="description" content="Yazılım Yapımı Dönem Projesi" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
     <link rel="apple-touch-icon" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/images/ico/apple-icon-120.png" />
     <link rel="shortcut icon" type="image/x-icon" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/images/ico/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/vendors.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/menu/menu-types/vertical-compact-menu.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/colors/palette-gradient.css">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Font-Awesome/font-awesome.min.css" rel="stylesheet" />
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Alertify/alertify.min.css" rel="stylesheet" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/vendors.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/app.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/menu/menu-types/vertical-compact-menu.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/colors/palette-gradient.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/vendors/css/charts/morris.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/fonts/simple-line-icons/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%# Page.ResolveUrl("~") %>/asset/app-assets/css/core/colors/palette-gradient.css" rel="stylesheet" type="text/css" />
     <link href="<%# Page.ResolveUrl("~") %>/asset/css/Custom/AdminMaster.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="cphCSS" runat="server">
     </asp:ContentPlaceHolder>
@@ -55,11 +51,11 @@
                             <li class="dropdown dropdown-user nav-item">
                                 <a class="dropdown-toggle nav-link dropdown-user-link mt-3" href="#" data-toggle="dropdown">
                                     <span class="mr-1">
-                                        <span class="user-name text-bold-700"><%=Session["Username"]!=null ? Session["Username"].ToString() : "-"%></span>
+                                        <span class="user-name text-bold-700 text-dark"><%=Session["Username"]!=null ? Session["Username"].ToString() : "-"%></span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-left">
-                                    <a class="dropdown-item" href="#" onclick="Logout('Authorized')"><i class="ft-power"></i>Çıkış</a>
+                                    <a class="dropdown-item" href="#" onclick="Logout()"><i class="ft-power"></i>Çıkış</a>
                                 </div>
                             </li>
                         </ul>
@@ -89,6 +85,7 @@
         <script src="<%# Page.ResolveUrl("~") %>/asset/app-assets/js/core/app-menu.js" type="text/javascript"></script>
         <script src="<%# Page.ResolveUrl("~") %>/asset/app-assets/js/core/app.js" type="text/javascript"></script>
         <script src="<%# Page.ResolveUrl("~") %>/asset/app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/asset/js/Custom/AuthenticationService.js"></script>
         <asp:ContentPlaceHolder ID="cphJS" runat="server">
         </asp:ContentPlaceHolder>
     </form>

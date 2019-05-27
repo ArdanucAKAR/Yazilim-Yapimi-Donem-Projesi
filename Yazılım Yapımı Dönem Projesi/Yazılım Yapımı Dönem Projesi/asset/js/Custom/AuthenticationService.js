@@ -74,7 +74,7 @@
     }
     return false;
 }
-function Logout(userType) {
+function Logout() {
     $.ajax({
         type: "POST",
         url: "../../../AuthenticationServiceAPI.asmx/Logout",
@@ -82,7 +82,7 @@ function Logout(userType) {
         dataType: "json",
         success: function (r) {
             setTimeout(function () {
-                location.replace((userType === "Member" ? "Login" : "Admin/Login"));
+                location.replace("Login");
             }, 1000);
         },
         error: function (r) {
