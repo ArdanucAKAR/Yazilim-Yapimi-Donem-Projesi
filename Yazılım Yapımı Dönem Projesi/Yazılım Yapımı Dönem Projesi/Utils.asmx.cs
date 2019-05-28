@@ -36,10 +36,10 @@ namespace Yazilim_Yapimi_Donem_Projesi
         {
             return Operation.GetWord(word);
         }
-        //[WebMethod(EnableSession = true)]
-        //public bool CheckWord(string word)
-        //{
-        //    return Operation.CheckWord(word);
-        //}
+        [WebMethod(EnableSession = true)]
+        public object NewQuestion()
+        {
+            return Operation.NewQuestion();
+        }
     }
 }

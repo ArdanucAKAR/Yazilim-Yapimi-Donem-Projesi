@@ -1,0 +1,26 @@
+﻿.display-1 {
+    font-size: 10vw;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.display-4 {
+    font-size: 7vw;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.pull-up:hover {
+    background-color: #e7e7e7;
+}
+
+.content-body {
+    display: none;
+}
+
+.bg-gradient-y-success {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}

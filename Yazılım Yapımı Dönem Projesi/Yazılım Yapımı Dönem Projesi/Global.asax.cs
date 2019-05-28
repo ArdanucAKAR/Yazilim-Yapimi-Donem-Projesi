@@ -20,6 +20,7 @@ namespace Yazilim_Yapimi_Donem_Projesi
             routes.MapPageRoute("MemberLoginDefault", "", "~/Login.aspx");
             routes.MapPageRoute("MemberLogin", "Login", "~/Login.aspx");
             routes.MapPageRoute("MemberHome", "Home", "~/Index.aspx");
+            routes.MapPageRoute("MemberGame", "Game", "~/Game.aspx");
 
             routes.MapPageRoute("AdminLoginDefault", "admin", "~/admin/Login.aspx");
             routes.MapPageRoute("AdminLogin", "Admin/Login", "~/admin/Login.aspx");

@@ -26,5 +26,10 @@ namespace Yazilim_Yapimi_Donem_Projesi
         {
             return member.GetStatistics(statisticsType);
         }
+        [WebMethod(EnableSession = true)]
+        public bool AddAction(Member member, Word word, int isCorret)
+        {
+            return member.AddAction(word, isCorret);
+        }
     }
 }

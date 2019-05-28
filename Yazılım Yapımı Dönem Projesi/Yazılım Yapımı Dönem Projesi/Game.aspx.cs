@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Yazilim_Yapimi_Donem_Projesi
 {
-    public partial class main : System.Web.UI.MasterPage
+    public partial class Game : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!AuthenticationService.isLoggedIn())
-                Response.Redirect("~/Login");
+
         }
     }
 }

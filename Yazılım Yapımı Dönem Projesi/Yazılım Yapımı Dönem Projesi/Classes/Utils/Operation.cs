@@ -44,14 +44,13 @@ namespace Yazilim_Yapimi_Donem_Projesi
             ds.Tables[0].TableName = "GetWord";
             return JsonConvert.SerializeObject(ds);
         }
-        //public static bool CheckWord(string word)
-        //{
-        //    Database.ProcedureName = "dbo.CheckWord";
-        //    SqlParameter[] sqlParameters = new SqlParameter[1];
-        //    sqlParameters[0] = new SqlParameter("@word", SqlDbType.NVarChar, 50);
-        //    sqlParameters[0].Value = word;
-        //    DataSet ds = Database.Queries(sqlParameters);
-        //    return ds.Tables[0].Rows.Count == 0 ? true : false;
-        //}
+        public static object NewQuestion()
+        {
+            Database.ProcedureName = "dbo.NewQuestion";
+            DataSet ds = Database.Queries(null);
+            ds.Tables[0].TableName = "Question";
+            ds.Tables[1].TableName = "Answers";
+            return JsonConvert.SerializeObject(ds);
+        }
     }
 }

@@ -75,7 +75,11 @@
   <ItemGroup>
     <Content Include="admin\Index.aspx" />
     <Content Include="admin\Login.aspx" />
+    <Content Include="asset\css\Custom\MemberGame.css" />
     <Content Include="asset\css\Custom\MemberMaster.css" />
+    <Content Include="asset\js\Custom\MemberGame.js" />
+    <Content Include="asset\js\Custom\MemberIndex.js" />
+    <Content Include="Game.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="trash\NewFolder1\Login.aspx" />
     <Content Include="asset\app-assets\css-rtl\app.css" />
@@ -5633,6 +5637,13 @@
     </Compile>
     <Compile Include="admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Game.aspx.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Game.aspx.designer.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

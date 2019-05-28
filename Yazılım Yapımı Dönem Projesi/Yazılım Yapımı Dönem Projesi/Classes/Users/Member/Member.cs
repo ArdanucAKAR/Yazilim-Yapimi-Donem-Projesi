@@ -54,5 +54,17 @@ namespace Yazilim_Yapimi_Donem_Projesi
             ds.Tables[0].TableName = "GetStatistics";
             return JsonConvert.SerializeObject(ds);
         }
+        public bool AddAction(Word word, int isCorret)
+        {
+            Database.ProcedureName = "dbo.AddMemberAction";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@memberId", SqlDbType.Int);
+            sqlParameters[0].Value = Id;
+            sqlParameters[1] = new SqlParameter("@word", SqlDbType.Int);
+            sqlParameters[1].Value = word.Id;
+            sqlParameters[2] = new SqlParameter("@isCorret", SqlDbType.Bit);
+            sqlParameters[2].Value = isCorret;
+            return Database.Queries(sqlParameters) != null ? true : false;
+        }
     }
 }
