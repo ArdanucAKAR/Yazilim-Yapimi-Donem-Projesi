@@ -5,6 +5,7 @@ using System.Web.Services.Protocols;
 using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Data;
+using Newtonsoft.Json;
 
 namespace Yazilim_Yapimi_Donem_Projesi
 {
@@ -39,6 +40,19 @@ namespace Yazilim_Yapimi_Donem_Projesi
         public bool Update()
         {
             throw new NotImplementedException();
+        }
+
+        public object GetStatistics(string statisticsType)
+        {
+            Database.ProcedureName = "dbo.GetStatistics";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@statisticsType", SqlDbType.NVarChar, 50);
+            sqlParameters[0].Value = statisticsType;
+            sqlParameters[1] = new SqlParameter("@memberId", SqlDbType.NVarChar, 50);
+            sqlParameters[1].Value = Id;
+            DataSet ds = Database.Queries(sqlParameters);
+            ds.Tables[0].TableName = "GetStatistics";
+            return JsonConvert.SerializeObject(ds);
         }
     }
 }

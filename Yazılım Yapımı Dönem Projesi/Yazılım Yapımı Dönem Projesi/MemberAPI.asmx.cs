@@ -21,5 +21,10 @@ namespace Yazilim_Yapimi_Donem_Projesi
         {
             return member.Add();
         }
+        [WebMethod(EnableSession = true)]
+        public object GetStatistics(Member member, string statisticsType)
+        {
+            return member.GetStatistics(statisticsType);
+        }
     }
 }

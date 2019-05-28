@@ -27,6 +27,7 @@ namespace Yazilim_Yapimi_Donem_Projesi
 
             if (ds.Tables[0].Rows.Count == 1)
             {
+                HttpContext.Current.Session.Add("UserId", ds.Tables[0].Rows[0]["id"].ToString());
                 HttpContext.Current.Session.Add("Username", ds.Tables[0].Rows[0]["username"].ToString());
                 HttpContext.Current.Session.Add("Password", ds.Tables[0].Rows[0]["password"].ToString());
                 HttpContext.Current.Session.Add("LoggedIn", true);

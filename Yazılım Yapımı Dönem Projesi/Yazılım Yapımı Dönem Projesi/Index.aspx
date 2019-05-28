@@ -24,6 +24,13 @@
                     <div class="card-body">
                         <canvas id="bar-chart" height="400"></canvas>
                     </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-min-width box-shadow-1 mr-1 mb-1" onclick="getStatistics('Today')">Bugün</button>
+                        <button type="button" class="btn btn-success btn-min-width box-shadow-2 mr-1 mb-1" onclick="getStatistics('LastWeek')">Son 1 Hafta</button>
+                        <button type="button" class="btn btn-info btn-min-width box-shadow-3 mr-1 mb-1" onclick="getStatistics('LastMonth')">Son 1 Ay</button>
+                        <button type="button" class="btn btn-warning btn-min-width box-shadow-4 mr-1 mb-1" onclick="getStatistics('LastSixMonth')">Son 6 Ay</button>
+                        <button type="button" class="btn btn-danger btn-min-width box-shadow-5 mr-1 mb-1" onclick="getStatistics('LastYear')">Son 1 Sene</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -509,7 +516,11 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphJS" runat="server">
     <script src="<%# Page.ResolveUrl("~") %>/asset/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
     <script>
-        $(window).on("load", function () {
+        var linechart;
+        getStatistics('LastYear');
+        function getStatistics(statisticsType) {
+            if (linechart != undefined)
+                linechart.destroy();
             var ctx = $("#bar-chart");
             var chartOptions = {
                 elements: {
@@ -538,6 +549,9 @@
                     }],
                     yAxes: [{
                         display: true,
+                        ticks: {
+                            beginAtZero: true
+                        },
                         gridLines: {
                             color: "#f3f3f3",
                             drawTicks: true,
@@ -552,95 +566,85 @@
                     text: ''
                 }
             };
-
-            // Chart Data
-            var chartDataSonBirYıl = {
-                labels: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+            var data = JSON.stringify({
+                member: {
+                    Id: <%=Session["UserId"] != null ? Session["UserId"] : 0%>
+                },
+                statisticsType: statisticsType
+            });
+            var statisticsTypes = [["Bugün", "Today"], ["Son 1 Hafta", "LastWeek"], ["Son 1 Ay", "LastMonth"], ["Son 6 Ay", "LastSixMonth"], ["Son 1 Sene", "LastYear"]];
+            var labels, returnData;
+            for (var a = 0; a < statisticsTypes.length; a++) {
+                if (statisticsTypes[a][1] === statisticsType) {
+                    labels = [statisticsTypes[a][0]];
+                    break;
+                }
+            }
+            $.ajax({
+                type: "POST",
+                url: "../../../MemberAPI.asmx/GetStatistics",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                async: false,
+                dataType: "json",
+                success: function (r) {
+                    returnData = JSON.parse(r.d);
+                    returnData = returnData["GetStatistics"];
+                },
+                error: function (r) {
+                    console.log(r.responseText);
+                },
+                failure: function (r) {
+                    console.log(r.responseText);
+                }
+            });
+            var chartData = {
+                labels: labels,
                 datasets: [
                     {
                         label: "Birinci Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        data: [returnData[0].StageCount],
                         backgroundColor: "#173E5F",
                         hoverBackgroundColor: "rgba(2, 24, 43, 1)",
                         borderColor: "transparent"
                     },
                     {
                         label: "İkinci Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        data: [returnData[1].StageCount],
                         backgroundColor: "#20639B",
                         hoverBackgroundColor: "rgba(6, 58, 101, 1)",
                         borderColor: "transparent"
                     },
                     {
                         label: "Üçüncü Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        data: [returnData[2].StageCount],
                         backgroundColor: "#3CAEA2",
                         hoverBackgroundColor: "rgba(9, 132, 119, 1)",
                         borderColor: "transparent"
                     },
                     {
                         label: "Dördüncü Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        data: [returnData[3].StageCount],
                         backgroundColor: "#F6D55C",
                         hoverBackgroundColor: "rgba(181, 148, 25, 1)",
                         borderColor: "transparent"
                     },
                     {
                         label: "Öğrenildi",
-                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        data: [returnData[4].StageCount],
                         backgroundColor: "#ED573B",
                         hoverBackgroundColor: "rgba(165, 31, 6, 1)",
                         borderColor: "transparent"
                     }
                 ]
             };
-            var chartDataSonBirHafta = {
-                labels: ["21.05.2019", "22.05.2019", "23.05.2019", "24.05.2019", "25.05.2019", "26.05.2019", "27.05.2019"],
-                datasets: [
-                    {
-                        label: "Birinci Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10],
-                        backgroundColor: "#173E5F",
-                        hoverBackgroundColor: "rgba(2, 24, 43, 1)",
-                        borderColor: "transparent"
-                    },
-                    {
-                        label: "İkinci Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10],
-                        backgroundColor: "#20639B",
-                        hoverBackgroundColor: "rgba(6, 58, 101, 1)",
-                        borderColor: "transparent"
-                    },
-                    {
-                        label: "Üçüncü Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10],
-                        backgroundColor: "#3CAEA2",
-                        hoverBackgroundColor: "rgba(9, 132, 119, 1)",
-                        borderColor: "transparent"
-                    },
-                    {
-                        label: "Dördüncü Kontrol Noktası",
-                        data: [10, 10, 10, 10, 10, 10, 10],
-                        backgroundColor: "#F6D55C",
-                        hoverBackgroundColor: "rgba(181, 148, 25, 1)",
-                        borderColor: "transparent"
-                    },
-                    {
-                        label: "Öğrenildi",
-                        data: [10, 10, 10, 10, 10, 10, 10],
-                        backgroundColor: "#ED573B",
-                        hoverBackgroundColor: "rgba(165, 31, 6, 1)",
-                        borderColor: "transparent"
-                    }
-                ]
-            };
-
             var config = {
                 type: 'bar',
                 options: chartOptions,
                 data: chartData
             };
-            var lineChart = new Chart(ctx, config);
-        });
+            linechart = new Chart(ctx, config);
+            linechart.update();
+        }
     </script>
 </asp:Content>
