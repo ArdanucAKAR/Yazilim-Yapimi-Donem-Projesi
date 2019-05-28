@@ -13,11 +13,11 @@
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="media-body text-left">
-                                        <h3 class="info" id="WordCount"></h3>
+                                        <h3 class="text-dark" id="WordCount"></h3>
                                         <h6>Kelime Sayısı</h6>
                                     </div>
                                     <div>
-                                        <i class="fa fa-wordpress info fa-3x float-right"></i>
+                                        <i class="fa fa-wordpress text-dark fa-3x float-right"></i>
                                     </div>
                                 </div>
                             </div>
@@ -30,11 +30,11 @@
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="media-body text-left">
-                                        <h3 class="info" id="MemberCount"></h3>
+                                        <h3 class="text-dark" id="MemberCount"></h3>
                                         <h6>Üye Sayısı</h6>
                                     </div>
                                     <div>
-                                        <i class="fa fa-user info fa-3x float-right"></i>
+                                        <i class="fa fa-user text-dark fa-3x float-right"></i>
                                     </div>
                                 </div>
                             </div>
@@ -51,11 +51,11 @@
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="media-body text-left">
-                                        <h3 class="info mt-1">Ekle</h3>
+                                        <h3 class="text-dark mt-1">Ekle</h3>
                                     </div>
                                     <div>
-                                        <i class="fa fa-wordpress info fa-3x"></i>
-                                        <i class="fa fa-plus info fa-3x"></i>
+                                        <i class="fa fa-wordpress text-dark fa-3x"></i>
+                                        <i class="fa fa-plus text-dark fa-3x"></i>
                                     </div>
                                 </div>
                             </div>
@@ -68,11 +68,11 @@
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="media-body text-left">
-                                        <h3 class="info mt-1">Sil</h3>
+                                        <h3 class="text-dark mt-1">Sil</h3>
                                     </div>
                                     <div>
-                                        <i class="fa fa-wordpress info fa-3x"></i>
-                                        <i class="fa fa-remove info fa-3x"></i>
+                                        <i class="fa fa-wordpress text-dark fa-3x"></i>
+                                        <i class="fa fa-remove text-dark fa-3x"></i>
                                     </div>
                                 </div>
                             </div>
@@ -85,11 +85,11 @@
                             <div class="card-body">
                                 <div class="media d-flex">
                                     <div class="media-body text-left">
-                                        <h3 class="info mt-1">Güncelle</h3>
+                                        <h3 class="text-dark mt-1">Güncelle</h3>
                                     </div>
                                     <div>
-                                        <i class="fa fa-wordpress info fa-3x"></i>
-                                        <i class="fa fa-wrench info fa-3x"></i>
+                                        <i class="fa fa-wordpress text-dark fa-3x"></i>
+                                        <i class="fa fa-wrench text-dark fa-3x"></i>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
         </section>
         <section id="AddWord">
             <div class="text-center">
-                <button name="Home" type="button" class="btn btn-lg btn-info mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
+                <button name="Home" type="button" class="btn btn-lg btn-dark mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
             </div>
             <div class="form-group">
                 <input type="text" name="addWord_Word" class="form-control mb-2" placeholder="Kelime">
@@ -111,7 +111,7 @@
         </section>
         <section id="DeleteWord">
             <div class="text-center">
-                <button name="Home" type="button" class="btn btn-lg btn-info mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
+                <button name="Home" type="button" class="btn btn-lg btn-dark mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
             </div>
             <div class="form-group">
                 <select name="deleteWord_Words" class="form-control"></select>
@@ -120,7 +120,7 @@
         </section>
         <section id="UpdateWord">
             <div class="text-center">
-                <button name="Home" type="button" class="btn btn-lg btn-info mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
+                <button name="Home" type="button" class="btn btn-lg btn-dark mb-4" onclick="HomePage()"><i class="fa fa-home"></i></button>
             </div>
             <div class="form-group">
                 <select name="updateWord_Words" class="form-control w-100"></select>

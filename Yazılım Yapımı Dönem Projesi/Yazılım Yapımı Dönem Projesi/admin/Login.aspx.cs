@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace Yazilim_Yapimi_Donem_Projesi.admin
 {
-    public partial class Login1 : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "E.W.L Admin Giriş Paneli";
-            if (AuthenticationService.isLoggedIn())
+            if (AuthenticationService.isLoggedIn() && Session["UserType"].ToString() == "Authorized")
                 Response.Redirect("~/Admin/Home");
         }
     }

@@ -77,11 +77,36 @@
     <Content Include="admin\Login.aspx" />
     <Content Include="asset\css\Custom\MemberGame.css" />
     <Content Include="asset\css\Custom\MemberMaster.css" />
+    <Content Include="asset\img\favicon\android-icon-144x144.png" />
+    <Content Include="asset\img\favicon\android-icon-192x192.png" />
+    <Content Include="asset\img\favicon\android-icon-36x36.png" />
+    <Content Include="asset\img\favicon\android-icon-48x48.png" />
+    <Content Include="asset\img\favicon\android-icon-72x72.png" />
+    <Content Include="asset\img\favicon\android-icon-96x96.png" />
+    <Content Include="asset\img\favicon\apple-icon-114x114.png" />
+    <Content Include="asset\img\favicon\apple-icon-120x120.png" />
+    <Content Include="asset\img\favicon\apple-icon-144x144.png" />
+    <Content Include="asset\img\favicon\apple-icon-152x152.png" />
+    <Content Include="asset\img\favicon\apple-icon-180x180.png" />
+    <Content Include="asset\img\favicon\apple-icon-57x57.png" />
+    <Content Include="asset\img\favicon\apple-icon-60x60.png" />
+    <Content Include="asset\img\favicon\apple-icon-72x72.png" />
+    <Content Include="asset\img\favicon\apple-icon-76x76.png" />
+    <Content Include="asset\img\favicon\apple-icon-precomposed.png" />
+    <Content Include="asset\img\favicon\apple-icon.png" />
+    <Content Include="asset\img\favicon\browserconfig.xml" />
+    <Content Include="asset\img\favicon\favicon-16x16.png" />
+    <Content Include="asset\img\favicon\favicon-32x32.png" />
+    <Content Include="asset\img\favicon\favicon-96x96.png" />
+    <Content Include="asset\img\favicon\favicon.ico" />
+    <Content Include="asset\img\favicon\ms-icon-144x144.png" />
+    <Content Include="asset\img\favicon\ms-icon-150x150.png" />
+    <Content Include="asset\img\favicon\ms-icon-310x310.png" />
+    <Content Include="asset\img\favicon\ms-icon-70x70.png" />
     <Content Include="asset\js\Custom\MemberGame.js" />
     <Content Include="asset\js\Custom\MemberIndex.js" />
     <Content Include="Game.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="trash\NewFolder1\Login.aspx" />
     <Content Include="asset\app-assets\css-rtl\app.css" />
     <Content Include="asset\app-assets\css-rtl\app.min.css" />
     <Content Include="asset\app-assets\css-rtl\bootstrap-extended.css" />
@@ -5600,7 +5625,6 @@
     <Content Include="asset\js\JQuery\jquery-3.4.1.min.js" />
     <Content Include="asset\js\JQuery-Validation\jquery.validate.js" />
     <Content Include="asset\js\JQuery-Validation\jquery.validate.min.js" />
-    <Content Include="trash\Login1.aspx" />
     <Content Include="App_Data\YazilimTasarimi.mdf" />
     <Content Include="App_Data\YazilimTasarimi_log.ldf">
       <DependentUpon>YazilimTasarimi.mdf</DependentUpon>
@@ -5614,7 +5638,6 @@
     <Content Include="asset\css\Font-Awesome\font-awesome.min.css" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="asset\img\logo.jpg" />
-    <Content Include="trash\NewFolder2\Login.aspx" />
     <Content Include="asset\css\Font-Awesome\fonts\FontAwesome.otf" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="asset\css\Font-Awesome\fonts\fontawesome-webfont.woff" />
@@ -5652,13 +5675,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="trash\NewFolder1\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="trash\NewFolder1\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="admin\main.Master.cs">
       <DependentUpon>main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5692,21 +5708,6 @@
     </Compile>
     <Compile Include="Classes\Utils\AuthenticationService.cs" />
     <Compile Include="Classes\Utils\Database.cs" />
-    <Compile Include="trash\deneme.cs" />
-    <Compile Include="trash\Login1.aspx.cs">
-      <DependentUpon>Login1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="trash\Login1.aspx.designer.cs">
-      <DependentUpon>Login1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="trash\NewFolder2\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="trash\NewFolder2\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="main.Master.cs">
       <DependentUpon>main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5730,6 +5731,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="main.Master" />
+    <Content Include="asset\img\favicon\manifest.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

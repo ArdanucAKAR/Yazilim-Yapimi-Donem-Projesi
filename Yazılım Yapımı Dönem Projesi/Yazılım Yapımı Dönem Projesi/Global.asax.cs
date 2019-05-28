@@ -22,7 +22,7 @@ namespace Yazilim_Yapimi_Donem_Projesi
             routes.MapPageRoute("MemberHome", "Home", "~/Index.aspx");
             routes.MapPageRoute("MemberGame", "Game", "~/Game.aspx");
 
-            routes.MapPageRoute("AdminLoginDefault", "admin", "~/admin/Login.aspx");
+            routes.MapPageRoute("AdminLoginDefault", "Admin", "~/admin/Login.aspx");
             routes.MapPageRoute("AdminLogin", "Admin/Login", "~/admin/Login.aspx");
             routes.MapPageRoute("AdminHome", "Admin/Home", "~/admin/Index.aspx");
         }

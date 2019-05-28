@@ -10,7 +10,7 @@
 namespace Yazilim_Yapimi_Donem_Projesi.admin {
     
     
-    public partial class Login1 {
+    public partial class Login {
         
         /// <summary>
         /// EWL control.

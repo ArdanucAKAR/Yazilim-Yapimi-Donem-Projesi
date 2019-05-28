@@ -12,7 +12,7 @@ namespace Yazilim_Yapimi_Donem_Projesi
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "E.W.L Giriş Paneli";
-            if (AuthenticationService.isLoggedIn())
+            if (AuthenticationService.isLoggedIn() && Session["UserType"].ToString() == "Member")
                 Response.Redirect("~/Home");
         }
     }

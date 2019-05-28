@@ -11,7 +11,7 @@ namespace Yazilim_Yapimi_Donem_Projesi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = "E.W.L";
         }
     }
 }

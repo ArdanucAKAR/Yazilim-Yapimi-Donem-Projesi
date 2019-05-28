@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" runat="server">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-2">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">İstatistikler</h4>
