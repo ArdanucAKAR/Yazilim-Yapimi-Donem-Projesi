@@ -32,28 +32,32 @@
     });
 
     $("button[name='Delete']").click(function () {
-        var data = JSON.stringify({
-            word: {
-                Id: $("select[name='deleteWord_Words']").val()
-            }
-        });
-        $.ajax({
-            type: "POST",
-            url: "../../../AuthorizedAPI.asmx/DeleteWord",
-            data: data,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (r) {
-                alertify.notify('Kelime Silindi', 'customSuccess', 5);
-                getWords("deleteWord_Words");
-            },
-            error: function (r) {
-                console.log(r.responseText);
-            },
-            failure: function (r) {
-                console.log(r.responseText);
-            }
-        });
+        if ($('select[name=deleteWord_Words]').val() !== '0') {
+            var data = JSON.stringify({
+                word: {
+                    Id: $("select[name='deleteWord_Words']").val()
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "../../../AuthorizedAPI.asmx/DeleteWord",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (r) {
+                    alertify.notify('Kelime Silindi', 'customSuccess', 5);
+                    getWords("deleteWord_Words");
+                },
+                error: function (r) {
+                    console.log(r.responseText);
+                },
+                failure: function (r) {
+                    console.log(r.responseText);
+                }
+            });
+        }
+        else
+            alertify.notify('Kelime Seçiniz', 'customError', 5);
     });
 
     $("button[name='Update']").click(function () {
@@ -105,7 +109,8 @@
     });
 
     $('select[name=updateWord_Languages]').on('change', function () {
-        getWord($('select[name=updateWord_Words]').val(), $('select[name=updateWord_Languages]').val());
+        if ($('select[name=updateWord_Words]').val() !== '0')
+            getWord($('select[name=updateWord_Words]').val(), $('select[name=updateWord_Languages]').val());
     });
 
     HomePage();
@@ -225,6 +230,7 @@ function getWords(name) {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (r) {
+            $("select[name=" + name + "]").append("<option value='0'>Bir Kelime Seçiniz</option>");
             var data = JSON.parse(r.d);
             for (var a = 0; a < data.AllWord.length; a++)
                 $("select[name=" + name + "]").append("<option value='" + data.AllWord[a].id + "'>" + data.AllWord[a].word + "</option>");
