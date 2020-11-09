@@ -1,0 +1,1 @@
+Yaptık bişiler
